@@ -8,9 +8,9 @@ Features
 
 * Skip Cart Page (go direct to checkout)
 
-# TODO
+* Create service widget on admin dashboard
 
-* Create service widget on admin dashboard (https://github.com/chrisjrocen/Chrx-service-widget)
+# TODO
 
 * Add admin controls
 
