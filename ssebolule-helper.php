@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Helper Plugin
+ * Plugin Name: Ssebo Lule Helper Plugin
  * Plugin URI:  https://ocenchris.com
  * Description: tracks custom post type
  * Author:      Ocen Chris
@@ -19,9 +19,4 @@ if ( 'TRACKS_CUSTOM_URL' ) {
 	define( 'TRACKS_CUSTOM_URL', plugin_dir_url( __FILE__ ) );
 }
 
-require_once( plugin_dir_path( __FILE__ ) . '/core/post-types/tracks.php' );
-require_once( plugin_dir_path( __FILE__ ) . '/core/shortcodes/tracks.php' );
-require_once( plugin_dir_path( __FILE__ ) . '/core/acf/acf-fields.php' );
-require_once( plugin_dir_path( __FILE__ ) . '/helpers/functions.php' );
-require_once( plugin_dir_path( __FILE__ ) . '/core/taxonomies/album.php' );
-require( plugin_dir_path( __FILE__ ) . '/template-parts/loop-track.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'functions.php' );
