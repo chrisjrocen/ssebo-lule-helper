@@ -84,11 +84,27 @@ function chrx_display_static_dashboard_widget()
 
 
 //Enqueue the custom CSS
-// add_action( 'wp_enqueue_scripts', 'hello_lule_enqueue_styles' );
-// function hello_lule_enqueue_styles() {
-// 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-// 	wp_enqueue_style( 'child-style',
-// 		get_stylesheet_directory_uri() . '/style.css',
-// 		array('parent-style')
-// 	);
-// }
+add_action('wp_enqueue_scripts', 'chrx_enqueue_styles', 10);
+function chrx_enqueue_styles()
+{
+
+	wp_enqueue_style('my-css', HELPER_CUSTOM_URL . 'assets/build/css/base.css', array(), '0.1.0', 'all');
+}
+
+
+//It will remove the selected quantity count from checkout page table.
+function chrx_remove_quantity_text($cart_item, $cart_item_key)
+{
+	$product_quantity = '';
+	return $product_quantity;
+}
+
+add_filter('woocommerce_checkout_cart_item_quantity', 'chrx_remove_quantity_text', 10, 2);
+
+
+
+
+
+// Remove links to the product details pages from the product listing page of a WooCommerce store
+remove_action('woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10);
+remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5);
