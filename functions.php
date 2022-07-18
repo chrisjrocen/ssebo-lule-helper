@@ -40,11 +40,11 @@ function chrx_custom_add_to_cart_text()
 }
 
 //To skip cart
-add_filter('woocommerce_add_to_cart_redirect', 'chrx_skip_cart');
-function chrx_skip_cart()
-{
-	return wc_get_checkout_url();
-}
+// add_filter('woocommerce_add_to_cart_redirect', 'chrx_skip_cart');
+// function chrx_skip_cart()
+// {
+// 	return wc_get_checkout_url();
+// }
 
 //Remove Default metaboxes and adda custom metabox
 function chrx_add_dashboard_widget()
