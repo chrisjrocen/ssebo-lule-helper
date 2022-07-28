@@ -14,6 +14,6 @@ Features
 
 * Add admin controls
 
-* Add functionality to check if Woocomerce is installed
+* Add functionality to check if Woocomerce is installed [Guide](https://youtu.be/yGhB5zRXUos?t=551)
 
 * Add an option for the user to choose a custom page to redirect when skipping cart
